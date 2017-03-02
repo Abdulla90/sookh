@@ -1,0 +1,186 @@
+
+  <div ng-include="'/include/header.html'"></div>
+  <div ng-include="'/include/searchBox.html'"></div>
+     <div class="wrapper">
+      <!-- Categories Homepage Section Start -->
+      <section id="categories-homepage">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="section-title" style="text-align:center;">Browse Ads from Categories</h3>
+            </div>          
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-1 wow fadeInUpQuick" data-wow-delay="0.3s">
+                <div class="category-header">  
+                  <a href="mobile_category.html"><h4>Mobiles</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="mobile in mobiles">
+                    <li>
+                      <a href="{{mobile.link}}">{{mobile.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-2 wow fadeInUpQuick" data-wow-delay="0.6s">
+                <div class="category-header">  
+                  <a  href="Com&Cam_List.html"><h4>Computer and Cameras</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="computer in computers">
+                    <li>
+                      <a href="{{computer.link}}">{{computer.name}}</a>
+                    </li>              
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-3 wow fadeInUpQuick" data-wow-delay="0.9s">
+                <div class="category-header">  
+                  <a href="Elec&Applain_list.html"><h4>Electronics & Appliances</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="Electronic in Electronics">
+                    <li>
+                      <a href="{{Electronic.link}}">{{Electronic.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-4 wow fadeInUpQuick" data-wow-delay="1.2s">
+                <div class="category-header">  
+                  <a href="cars_List.html"><h4>Cars</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="car in cars">
+                    <li>
+                      <a href="{{car.link}}}">{{car.name}}</a>
+                   </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-5 wow fadeInUpQuick" data-wow-delay="1.5s">
+                 <div class="category-header">  
+                  <a href="Bikes_List.html"><h4>Bikes</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="Bike in bikes">
+                    <li>
+                      <a href="{{Bike.link}}">{{Bike.name}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-6 wow fadeInUpQuick" data-wow-delay="1.8s">
+                <div class="category-header">  
+                  <a href="furniture_List.html"><h4>Furnitures</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="Furniture in furnitures">
+                    <li>
+                      <a href="{{Furniture.link}}">{{Furniture.name}} </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-7 wow fadeInUpQuick" data-wow-delay="2.1s">
+                <div class="category-header">  
+                  <a href="RealEstate_List.html"><h4>Real Estate</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="RealEstate in RealEstates">
+                    <li>
+                      <a href="{{RealEstate.link}}">{{RealEstate.name}}</a>
+                   </li>
+                  </ul>
+                </div>
+              </div>
+            </div>            
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="category-box border-8 wow fadeInUpQuick" data-wow-delay="2.3s">
+                <div class="category-header">  
+                  <a href="fashion_List.html"><h4>Fashion</h4></a>
+                </div>
+                <div class="category-content">
+                  <ul ng-repeat="fashion in fashions">
+                    <li>
+                      <a href="{{fashion.link}}">{{fashion.name}}</a>
+                   </li>
+                  </ul>
+                </div>
+              </div>
+            </div>     
+          </div>
+        </div>
+      </section>
+      <!-- Categories Homepage Section End -->
+
+      <!-- Featured Listings Start -->
+      <section class="featured-lis" style="background-color:rgba(232, 211, 211, 0.72); margin-top:5%;" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 wow fadeIn" data-wow-delay="0.5s">
+              <h3 class="section-title" style="text-align:center; margin-top:3%; margin-bottom:2%;">Trending Ads</h3>
+              <div id="new-products" class="owl-carousel">
+              <div ng-repeat="ad in ads">
+                <div class="item">
+                  <div class="product-item">
+                    <div class="carousel-thumb">
+                      <img ng-src="/img/product/{{ad.imgSrc}}" alt=""> 
+                      <div class="overlay">
+                        <a href="{{ad.link}}"><i class="fa fa-link"></i></a>
+                      </div> 
+                    </div>    
+                    <a href="ads-details.html" class="item-name">{{ad.name}}</a>  
+                    <span class="price">{{ad.price}}</span>  
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+      <!-- Featured Listings End -->
+
+      <!-- Location Section Start -->
+      <section class="location">
+        <div class="container">
+          <!-- <div class="row localtion-list"> -->
+            <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
+              <h3 class="title-2"><i class="fa fa-envelope"></i> Subscribe for updates</h3>
+            <form id="subscribe" action="">
+              <p>For any Queries contact us</p>
+              <div class="subscribe">
+                <input class="form-control" name="EMAIL" placeholder="Your email here" required="" type="email">
+                <button class="btn btn-common" type="submit" style="background-color:rgb(175, 184, 43);">Subscribe</button>
+              </div>
+            </form>
+            </div>
+		</div>
+      </section>
+      <!-- Location Section End -->
+
+    </div>
+
+    <ng-include src="'../include/footer.html'" ></ng-include>
+    
+      <!-- <div ng-include="'/include/footer.html'"></div> -->
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+     <!-- <div ng-include="'/include/footer.html'"></div> -->
+
+   
